@@ -6,7 +6,7 @@ echo 'test¥n';
 
 echo isNullBlank(null);
 echo isNullBlank('test');
-echo 'test5';
+print 'test5';
 
 function isNullBlank($str) {
 

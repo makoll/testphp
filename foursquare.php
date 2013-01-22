@@ -4,6 +4,7 @@
 require_once('constants.php');
 
 try {
+
   $oauth_url =
     FOURSQUARE_AUTH_URL
     . "?client_id=" . FOURSQUARE_CLIENT_ID

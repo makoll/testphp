@@ -12,4 +12,5 @@ define('FOURSQUARE_CALLBACK',        $domainName.'fscallback.php');
 define('FOURSQUARE_AUTH_URL',        'https://ja.foursquare.com/oauth2/authorize');
 define('FOURSQUARE_ACCESS_TOKEN_URL','https://ja.foursquare.com/oauth2/access_token');
 
+define('FOURSQUARE_GET_INIT_LIMIT','9999');
 ?>

@@ -3,6 +3,7 @@
 echo 'test¥n';
 echo 'test¥n';
 
+echo $_SERVER['SERVER_ADDR'];
 
 echo isNullBlank(null);
 echo isNullBlank('test');

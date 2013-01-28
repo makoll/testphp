@@ -1,23 +1,38 @@
 <?php
-
-echo 'test¥n';
-echo 'test¥n';
-
-if($_SERVER) {
-  echo 1;
-} else {
-  echo 2;
-}
-
-print_r ($_SERVER);
-echo $_SERVER['SERVER_ADDR'];
-
-echo isNullBlank(null);
-echo isNullBlank('test');
-print 'test5';
-
-function isNullBlank($str) {
-
-  return (is_null($str) || $str == '');
-}
+  //カフェ検索
+  require_once('./constants.php');
+  require_once('./cafe_list.php');
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>logtown</title>
+<link href='css/jquery-ui-1.8.17.custom.css' rel='stylesheet' />
+<link href='css/cafe_search.css' rel='stylesheet' />
+<script src='./js/jquery-1.7.1.min.js'></script>
+<script src='./js/jquery-ui-1.8.17.custom.min.js'></script>
+<script src='http://api.its-mo.com/cgi/loader.cgi?key=JSZ3d80a0c3deff&ver=2.0&api=zdcmap.js&enc=SJIS&force=1'></script>
+<script src='./js/cafe_search.js'></script>
+</head>
+<body>
+
+<div id='map'>
+  <div id='map_body'></div>
+  <img id='density_map'/>
+</div>
+<div id='cafe_name'>
+<?php
+  $cafePoints = explode('_', $cafePoint);
+  foreach($cafePoints as $i => $eachCafePoint) {
+    $eachCafePointArray = explode(',', $eachCafePoint);
+?>
+  <div><?= $i+1 ?>: <?= $eachCafePointArray[0] ?></div>
+<?php } ?>
+
+</div>
+<div id='cafe_point'><?= $cafePoint ?></div>
+
+</body>
+</html>

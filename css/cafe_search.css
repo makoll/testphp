@@ -1,0 +1,27 @@
+/** ÉJÉtÉFåüçı */
+
+#map {
+  position: relative;
+  display: inline-block;
+}
+
+#map_body {
+  height: 600px;
+  width: 500px;
+}
+
+#density_map {
+  position: absolute;
+  top: 0px;
+  opacity: 0.9;
+}
+
+#cafe_point {
+  display: none;
+}
+
+#cafe_name {
+  display: inline-block;
+  position: relative;
+  top: -490px;
+}

@@ -3,7 +3,7 @@
 
 require_once('constants.php');
 
-$foursquare_access_token = '3C5YMJ00BBGFF0DBCKLPDYTRLZUYREUVTP0CMKI0GF20GCTK';
+// $foursquare_access_token = '3C5YMJ00BBGFF0DBCKLPDYTRLZUYREUVTP0CMKI0GF20GCTK';
 
 if(!$foursquare_access_token) {
 
@@ -18,6 +18,7 @@ if(!$foursquare_access_token) {
     $callback_data            = file_get_contents($access_token_url);
     $data                     = json_decode($callback_data, true);
     $foursquare_access_token  = $data['access_token'];
+echo $foursquare_access_token;
 
   } else {
     echo "<script type='text/javascript'>window.close();</script>";

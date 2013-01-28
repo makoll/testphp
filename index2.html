@@ -1,0 +1,24 @@
+<?php
+
+echo 'test¥n';
+echo 'test¥n';
+
+if($_SERVER) {
+  echo 1;
+} else {
+  echo 2;
+}
+
+print_r ($_SERVER);
+echo $_SERVER['SERVER_ADDR'];
+
+echo isNullBlank(null);
+echo isNullBlank('test');
+print 'test5';
+
+function isNullBlank($str) {
+
+  return (is_null($str) || $str == '');
+}
+?>
+<img src='http://aplia.its-mo.com/v1_0/density_latest/H/3600/image/point?key=37nQczCjmw0zChnQnvBbnAQf9HmgSPBsjgUzDUngBmppnQ7ypPngUXD9lwAjAipRi8JUoRHLFEpR4zT3&latlon=35.6481875,139.7106767&maplvl=6&wh=256,256&enc=UTF8&pflg=1&datum=WGS84'/>

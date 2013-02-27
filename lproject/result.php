@@ -50,6 +50,7 @@
     </div>
   </div>
 
+<div id='sss'>1</div>
 <div id="slider">
   <div class="slider-view">
     <div class="slider-container">

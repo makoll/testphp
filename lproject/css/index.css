@@ -93,6 +93,10 @@ body {
   height: 100%;               /* ④ */
 }
 
+.place_thumbnail {
+  width: 50px;
+}
+
 /**
   * @elem footer
   */
@@ -126,9 +130,14 @@ body {
   margin: 13px 2px 0px 16px;
 }
 
+body {
+  width: 645px;
+}
 #main_window {
+  width: 320px;
   display: inline-block;
 }
 #result2 {
+  width: 320px;
   display: inline-block;
 }

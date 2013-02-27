@@ -9,6 +9,7 @@
 <html>
 <head>
 <meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 <title>l project</title>
 <link href='./css/index.css?<?= $last_release_time ?>' rel='stylesheet' />
 <link href='./css/jquery-ui-1.10.0.custom.min.css' rel='stylesheet' />

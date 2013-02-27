@@ -50,5 +50,15 @@
     </div>
   </div>
 
+<div id="slider">
+  <div class="slider-view">
+    <div class="slider-container">
+      <div id=1><img src="/images/01.jpg" /></div>
+      <div id=2><img src="/images/02.jpg" /></div>
+      <div id=3><img src="/images/03.jpg" /></div>
+    </di>
+  </div>
+</div>
+
 </body>
 </head>

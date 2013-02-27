@@ -11,7 +11,6 @@
   */
 html, body {
   height: 100%;
-  width: 320px;
 }
 
 body {
@@ -19,26 +18,27 @@ body {
 }
 
 #content {
-  width: 320px;
+  width: 100%;
   height: 100%;
   background-color: #dddddd;
 }
 
 #logo {
+  width: 200px;
   position: relative;
   padding-top: 155px;
-}
-
-#logo_image {
-  display: block;
-  width: 200px;
   margin: 0px auto 0px auto;
 }
 
+#logo_image {
+  width: 200px;
+}
+
 #logo_caption {
+  width: 80px;
   position: absolute;
   top: 206px;
-  left: 222px;
+  left: 162px;
   color: #4C9F19;
   font-size: 12px;
   font-weight: bold;
@@ -46,7 +46,7 @@ body {
 
 #search {
   width: 303px;
-  margin: 12px auto 0px auto;
+  margin: 6px auto 0px auto;
 }
 
 #search_word {

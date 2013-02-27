@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/**
+ * Copyright 2013-2013, tritrue Inc. All rights reserved.
+ *
+ * @fileoverview トップページCSS
+ */
+
+/**
+  * @elem body
+  * TODO iphoneサイズ
+  */
+html, body {
+  height: 100%;
+  width: 320px;
+}
+
+body {
+  margin: 0px auto 0px auto;
+}
+
+#content {
+  width: 320px;
+  height: 100%;
+  background-color: #dddddd;
+}
+
+#logo {
+  position: relative;
+  padding-top: 155px;
+}
+
+#logo_image {
+  display: block;
+  width: 200px;
+  margin: 0px auto 0px auto;
+}
+
+#logo_caption {
+  position: absolute;
+  top: 206px;
+  left: 222px;
+  color: #4C9F19;
+  font-size: 12px;
+  font-weight: bold;
+  }
+
+#search {
+  width: 303px;
+  margin: 12px auto 0px auto;
+}
+
+#search_word {
+  display: inline-block;
+  height: 41px;
+  width: 250px;
+  margin-right: -5px;
+  -moz-border-radius: 5px 0px 0px 5px;
+  -webkit-border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#search_button {
+  display: inline-block;
+  height: 46px;
+  width: 47px;
+  position: relative;
+  top: 6px;
+  background-color: #4C9F19;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#loope {
+  position: relative;
+  top: 6px;
+  left: 6px;
+}
+
+#company_url {
+  width: 75px;
+  display: block;
+  margin: 200px auto 0px auto;
+  margin-top: 150px;
+  color: #4C9F19;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#search_result {
+  margin-top: 20px;
+}
+
+.place {
+  width: 600px;
+  border: solid 1px #666666;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.url {
+  font-size: 14px;
+  margin-left: 20px;
+}

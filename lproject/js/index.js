@@ -167,6 +167,7 @@ $(window).load(function() {
 
    /* スワイプ処理 */
      if (pageX > moveX) {
+       $('#sss').text(3);
        slide.next(absX, spd);
      } else if (pageX < moveX) {
        slide.prev(absX, spd);
@@ -188,6 +189,7 @@ $(window).load(function() {
 
    /* フリック処理(touchstartからの経過時間が短い場合) */
    if (diffTime < 400) {
+     $('#sss').text(2);
      if (diffX > 0) {
        slide.next(mv, spd, true);
      } else if (diffX < 0) {

@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright 2013-2013, tritrue Inc. All rights reserved.
+ *
+ * @fileoverview 検索トップ
+ */
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>l project</title>
+<link href='./css/index.css?<?= $last_release_time ?>' rel='stylesheet' />
+<link href='./css/jquery-ui-1.10.0.custom.min.css' rel='stylesheet' />
+<script src='./js/jquery-1.9.1.js'></script >
+<script src='./js/jquery-ui-1.10.0.custom.js'></script>
+<script src='./js/common.js?<?= $last_release_time ?>'></script>
+<script src='./js/index.js?<?= $last_release_time ?>'></script>
+</head>
+<body>
+  <div id='result'>
+  </div>
+  <div id='footer' class='info_window'>
+    <img id='footer_logo_image' src='./img/logo.png' >
+    <input type='text' id='search_word' value='居酒屋' >
+    <div id='search_button' >
+      <img id='loope' src='./img/loope.png' >
+    </div>
+  </div>
+
+</body>
+</head>

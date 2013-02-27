@@ -10,6 +10,7 @@
   * TODO iphoneサイズ
   */
 html, body {
+  height: 100%;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
 
 #content {
   background-color: #dddddd;
+  height: 100%;
 }
 
 #logo {
@@ -42,7 +44,7 @@ body {
   }
 
 #search {
-  width: 293px;
+  width: 290px;
   margin: 6px auto 0px auto;
 }
 
@@ -83,4 +85,43 @@ body {
   font-size: 12px;
   font-weight: bold;
   text-decoration: none;
+}
+
+#result {
+  min-height: 100%;           /* ② */
+  height: auto !important;    /* ③ */
+  height: 100%;               /* ④ */
+}
+
+/**
+  * @elem footer
+  */
+#footer {
+  width: 100%;
+  background-color: rgba(241, 241, 241, 1);
+  position: fixed;
+  bottom: 0px;
+  height: 51px;
+}
+
+#footer #search_word {
+  height: 31px;
+  width: 150px;
+  position: relative;
+  top: -9px;
+}
+
+#footer #search_button {
+  top: -6px;
+  height: 35px;
+  width: 37
+}
+
+#footer #loope {
+  height: 25px;
+}
+
+#footer_logo_image {
+  width: 78px;
+  margin: 13px 2px 0px 16px;
 }

@@ -42,14 +42,14 @@ body {
   }
 
 #search {
-  width: 303px;
+  width: 283px;
   margin: 6px auto 0px auto;
 }
 
 #search_word {
   display: inline-block;
   height: 41px;
-  width: 250px;
+  width: 230px;
   margin-right: -5px;
   -moz-border-radius: 5px 0px 0px 5px;
   -webkit-border-radius: 5px 0px 0px 5px;

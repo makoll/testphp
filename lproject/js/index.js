@@ -34,9 +34,55 @@ $(function() {
           search($(this).attr('value'));
           return false;
         }
-      }
-    );
+      })
+      .on('touchmove', 'body', swipe)
+      .on('touchend', 'body', flick);
   }
+
+  /* タッチしたまま動かしたときのイベント */
+  function swipe() {
+    var moveX = event.changedTouches[0].pageX; // X 座標の位置
+    var absX = Math.abs(pageX - moveX); // 移動距離の絶対値
+    var spd = 0.5;
+    pageY = event.changedTouches[0].pageY;
+
+    /* スワイプ処理 */
+      if (pageX > moveX) {
+        $('#sss').text(3);
+        slide.next(absX, spd);
+      } else if (pageX < moveX) {
+        slide.prev(absX, spd);
+      }
+      pageX = moveX;
+
+      return false;
+  };
+
+  /* タッチ状態から離れたときのイベント */
+  function flick() {
+    /* 終了処理が必要ならここに書く */
+    /* このイベントは、位置を取得できないので注意 */
+
+    var diffX = startPageX - pageX;
+    var absX = Math.abs(diffX);
+    var mv = 200; //フリック移動距離
+    var spd = 700; //フリックスピード
+    var now = +new Date(); //現在時間
+    var diffTime = now - startTime; //touchstartからの経過時間
+
+    /* フリック処理(touchstartからの経過時間が短い場合) */
+    if (diffTime < 400) {
+      $('#sss').text(2);
+      if (diffX > 0) {
+        slide.next(mv, spd, true);
+      } else if (diffX < 0) {
+        slide.prev(mv, spd, true);
+      }
+    }
+
+    move_time = 0;
+    return false;
+  };
 
   function search() {
     $.l__.doParallelAjaxAction(
@@ -158,46 +204,5 @@ $(window).load(function() {
    startTime = +new Date();
  });
 
- /* タッチしたまま動かしたときのイベント */
- $('#slider').bind('touchmove', function() {
-   var moveX = event.changedTouches[0].pageX; // X 座標の位置
-   var absX = Math.abs(pageX - moveX); // 移動距離の絶対値
-   var spd = 0.5;
-   pageY = event.changedTouches[0].pageY;
-
-   /* スワイプ処理 */
-     if (pageX > moveX) {
-       $('#sss').text(3);
-       slide.next(absX, spd);
-     } else if (pageX < moveX) {
-       slide.prev(absX, spd);
-     }
-     pageX = moveX;
- });
-
- /* タッチ状態から離れたときのイベント */
- $('#slider').bind('touchend', function() {
-   /* 終了処理が必要ならここに書く */
-   /* このイベントは、位置を取得できないので注意 */
-
-   var diffX = startPageX - pageX;
-   var absX = Math.abs(diffX);
-   var mv = 200; //フリック移動距離
-   var spd = 700; //フリックスピード
-   var now = +new Date(); //現在時間
-   var diffTime = now - startTime; //touchstartからの経過時間
-
-   /* フリック処理(touchstartからの経過時間が短い場合) */
-   if (diffTime < 400) {
-     $('#sss').text(2);
-     if (diffX > 0) {
-       slide.next(mv, spd, true);
-     } else if (diffX < 0) {
-       slide.prev(mv, spd, true);
-     }
-   }
-
-   move_time = 0;
- });
 });
 });

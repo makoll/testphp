@@ -1,0 +1,18 @@
+<?php
+define('ESCAPE_LETTER_COMMA', '%2Ccm&');
+function average($arg1)
+{
+  return str_replace(',', ESCAPE_LETTER_COMMA, $arg1);
+}
+$array1 = array('test', 'tes,t', ',t,e,s,t,');
+$result = array_map('average', $array1);
+print_r($result);
+/* 出力：
+Array
+(
+  [0] => 7
+  [1] => 5
+  [2] => 6
+)
+*/
+?>

@@ -1,0 +1,79 @@
+<?php
+  //カフェ検索
+  require_once('./constants.php');
+  require_once('./cafe_list.php');
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>logtown</title>
+<link href='css/jquery-ui-1.8.17.custom.css' rel='stylesheet' />
+<link href='css/20130423.css' rel='stylesheet' />
+<script src='./js/jquery-1.7.1.min.js'></script>
+<script src='./js/jquery-ui-1.8.17.custom.min.js'></script>
+<script src='./js/20130423.js'></script>
+</head>
+<body>
+
+<form method="post" action="example.cgi">
+
+<div class='parent'>
+  <div class='button'>
+  車種選択
+  </div>
+  <div class='menu'>
+    <div><input type="checkbox" name="q1" value="その1"> その1<img style='height:20px; width: 20px;' src='img/iphone_home.png'></div>
+    <div><input type="checkbox" name="q1" value="その2"> その2</div>
+    <div><input type="checkbox" name="q1" value="その3"> その3</div>
+    <div><input type="checkbox" name="q1" value="その4"> その4</div>
+    <div><input type="checkbox" name="q1" value="その5"> その5</div>
+  </div>
+</div>
+
+<div class='parent'>
+<div class='button'>
+タイプ
+</div>
+<div class='menu'>
+<div><input type="checkbox" name="q1" value="その1"> その1<img style='height:20px; width: 20px;' src='img/iphone_home.png'></div>
+<div><input type="checkbox" name="q1" value="その2"> その2</div>
+<div><input type="checkbox" name="q1" value="その3"> その3</div>
+<div><input type="checkbox" name="q1" value="その4"> その4</div>
+<div><input type="checkbox" name="q1" value="その5"> その5</div>
+</div>
+</div>
+
+<div class='parent'>
+<div class='button'>
+車種
+</div>
+<div class='menu'>
+<div><input type="checkbox" name="q1" value="その1"> その1<img style='height:20px; width: 20px;' src='img/iphone_home.png'></div>
+<div><input type="checkbox" name="q1" value="その2"> その2</div>
+<div><input type="checkbox" name="q1" value="その3"> その3</div>
+<div><input type="checkbox" name="q1" value="その4"> その4</div>
+<div><input type="checkbox" name="q1" value="その5"> その5</div>
+</div>
+</div>
+
+<div class='parent'>
+<div class='button'>
+予算
+</div>
+<div class='menu'>
+<div><input type="checkbox" name="q1" value="その1"> その1<img style='height:20px; width: 20px;' src='img/iphone_home.png'></div>
+<div><input type="checkbox" name="q1" value="その2"> その2</div>
+<div><input type="checkbox" name="q1" value="その3"> その3</div>
+<div><input type="checkbox" name="q1" value="その4"> その4</div>
+<div><input type="checkbox" name="q1" value="その5"> その5</div>
+</div>
+</div>
+
+<p><input type="submit" value="送信する"></p>
+
+</form>
+
+</body>
+</html>

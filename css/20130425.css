@@ -1,0 +1,11 @@
+body {
+  min-width: 900px;
+}
+#parent {
+  height: 312px;
+  width: 1236px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url(../img/back.png);
+  background-position: center center;
+}

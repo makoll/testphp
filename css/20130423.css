@@ -1,0 +1,18 @@
+.parent {
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  background-color: gray;
+  width: 150px;
+}
+
+.menu {
+  display: none;
+  background-color: orange;
+  width: 300px;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}

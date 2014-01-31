@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/**
+ * Copyright 2013-2013, tritrue Inc. All rights reserved.
+ *
+ * @fileoverview ※
+ */
+body {
+  font: 10px sans-serif;
+}
+
+svg {
+  width: 960px;
+  height: 500px;
+}
+
+#parent_g {
+  -webkit-transform: translate(50px, 20px);
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#x {
+  -webkit-transform: translate(0px, 450px);
+}
+
+#y_text {
+  -webkit-transform: rotate(-90deg);
+  text-anchor: end;
+}
+
+#line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}

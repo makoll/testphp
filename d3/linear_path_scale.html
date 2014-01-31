@@ -1,0 +1,62 @@
+<?php
+/**
+ * Copyright 2013-2013, tritrue Inc. All rights reserved.
+ * http://qiita.com/daxanya1/items/a2cd1a58cd072c3ebe67
+ */
+?>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+
+<script src="http://d3js.org/d3.v3.js"></script>
+<script>
+
+// この10個のデータを折れ線グラフにする
+var dataset =[ 2,0,0,0,0,0,0,0,1,1 ];
+
+// 50x50のsvg領域を作る
+var w = 50;
+var h = 50;
+var margin = 2; // 描画を内側に少し寄せるためのマージン
+var svg = d3.select("body")
+  .append("svg")
+  .attr("width", w)
+  .attr("height", h);
+
+// 配列内の値に差がなさすぎると、グラフの見た目に違和感があるので、
+// 最低でも５ポイント差がつくようにする
+var ymin = d3.min(dataset);
+var ymax = d3.max(dataset);
+if ((ymax - ymin) < 5) {
+  ymax += 5 - (ymax - ymin);
+}
+
+// d3.scaleを設定する。
+// x座標は、0からdatasetの配列の数(ここでは10個)までを、0からwidthまで
+//（正確にはmargin分内側に寄せて、marginからw-marginまで）にマッピングする
+// 線形（linear）のマッピングなので、xscale(0)は2に、xscale(10)は48(w-margin)になる。
+var xscale = d3.scale.linear().domain([0,dataset.length]).range([margin,w-margin]);
+
+// y座標は、配列内の最低値から最大値までを、h-marginからmarginまでにマッピングする
+// svg座標系がyについては逆になっているので、0からheightではなくて、heightから0とする。
+// yscale(0)は48(h-margin)に、yscale(5)は2になる。(上の計算でymax=5となっているため)
+var yscale = d3.scale.linear().domain([ymin, ymax]).range([h-margin,margin]);
+
+// 座標データから折れ線グラフ用のコマンドを作るための関数を用意
+var d3line = d3.svg.line()
+  .x(function(d,i){return xscale(i);}) // iには配列のindexが一つずつ入る
+  .y(function(d){return yscale(d);}) // dは配列の値が一つずつ入る
+  .interpolate("linear"); // エッジがシャープな折れ線を指定。
+ // 参考 https://www.dashingd3js.com/svg-paths-and-d3js
+
+// 実際に線を引く。
+svg.append("path")
+  .attr("d", d3line(dataset)) // さきほどの関数に座標の配列を引数で渡す
+  .style("stroke-width", 2) // 線の太さを決める
+  .style("stroke", "steelblue") // 色を決める
+  .style("fill", "none");
+
+</script>
+
+</body>
+</html>
